@@ -1,0 +1,31 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.table-container {
+  height: 400px;
+  overflow: auto;
+}
+
+.selectedcells {
+  background-color: DodgerBlue;
+
+}
+
+.selectedrows {
+    background-color: #efefef;
+
+}
+
+.divColor {
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  display: inline-block;
+  margin-right: 2px;
+}

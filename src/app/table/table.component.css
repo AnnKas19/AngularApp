@@ -19,13 +19,34 @@ table {
 
 .selectedrows {
     background-color: #efefef;
-
 }
 
 .divColor {
-  width: 10px;
-  height: 10px;
-  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+  border-radius: 2px;
   display: inline-block;
-  margin-right: 2px;
+  margin-right: 5px;
+  align-content: center; 
+  float: left;
+
 }
+
+.linkIcon {
+  color: white;
+  float: right;
+}
+
+.linkIcon:hover  {
+ color : DodgerBlue;
+ float: right;
+}
+
+.Tooltip {
+  background:DodgerBlue;
+}
+.mat-cell{ 
+  padding: 5px  !important;
+
+}
+

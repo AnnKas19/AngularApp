@@ -51,57 +51,44 @@ import {MatTreeModule} from '@angular/material/tree';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import { FormsModule } from '@angular/forms';
+import { AboutComponent } from './about/about.component';
+
+import {Routes, RouterModule} from '@angular/router';
+import { MainComponent } from './main/main.component';
+
+const appRoutes: Routes =[
+  { path: '', component: MainComponent},
+  { path: 'about', component: AboutComponent}
+];
 
 @NgModule({
   declarations: [
-    AppComponent,
-    TableComponent
+    AppComponent, TableComponent, AboutComponent, MainComponent
   ],
   imports: [FormsModule, BrowserAnimationsModule,
-    BrowserModule,
-    AppRoutingModule,A11yModule,
-    CdkStepperModule,
-    CdkTableModule,
-    CdkTreeModule,
-    DragDropModule,
-    MatAutocompleteModule,
-    MatBadgeModule,
-    MatBottomSheetModule,
-    MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatDividerModule,
-    MatExpansionModule,
-    MatGridListModule,
-    MatIconModule,
-    MatInputModule,
-    MatListModule,
-    MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
-    MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
-    MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
-    MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
-    MatTreeModule,
-    PortalModule,
-    ScrollingModule,
-    MatFormFieldModule
+    BrowserModule,   AppRoutingModule,A11yModule,
+    CdkStepperModule,  CdkTableModule,
+    CdkTreeModule,   DragDropModule,
+    MatAutocompleteModule,   MatBadgeModule,
+    MatBottomSheetModule,    MatButtonModule,
+    MatButtonToggleModule,    MatCardModule,
+    MatCheckboxModule,    MatChipsModule,
+    MatStepperModule,    MatDatepickerModule,
+    MatDialogModule,    MatDividerModule,
+    MatExpansionModule,    MatGridListModule,
+    MatIconModule,    MatInputModule,
+    MatListModule,    MatMenuModule,
+    MatNativeDateModule,    MatPaginatorModule,
+    MatProgressBarModule,    MatProgressSpinnerModule,
+    MatRadioModule,    MatRippleModule,
+    MatSelectModule,    MatSidenavModule,
+    MatSliderModule,    MatSlideToggleModule,
+    MatSnackBarModule,    MatSortModule,
+    MatTableModule,    MatTabsModule,
+    MatToolbarModule,    MatTooltipModule,
+    MatTreeModule,    PortalModule,
+    ScrollingModule,    MatFormFieldModule , 
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

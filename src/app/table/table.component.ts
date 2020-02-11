@@ -1,19 +1,21 @@
-import {Component, OnInit, ViewChild, Input} from '@angular/core';
+import {Component, OnInit, ViewChild, Input, ViewEncapsulation} from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
 
 import { ColDef, RowDef } from './table.interface';
-import { UserData } from '../app.component';
 import { BaseRowDef } from '@angular/cdk/table';
 import { stringify } from 'querystring';
+import {TooltipPosition} from '@angular/material/tooltip';
+import { UserData } from '../main/main.component';
 
 
 
 @Component({
   selector: 'app-table',
   styleUrls: ['table.component.css'],
-  templateUrl: 'table.component.html'
+  templateUrl: 'table.component.html',
+  encapsulation: ViewEncapsulation.None,
 })
 
 export class TableComponent implements OnInit {
@@ -32,6 +34,7 @@ export class TableComponent implements OnInit {
   selectedColumn: string;
   selectedRows: RowDef[] = [];
  // complexView$ : boolean;
+
  
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;

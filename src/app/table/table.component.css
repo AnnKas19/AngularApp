@@ -29,7 +29,6 @@ table {
   margin-right: 5px;
   align-content: center; 
   float: left;
-
 }
 
 .linkIcon {
@@ -47,6 +46,14 @@ table {
 }
 .mat-cell{ 
   padding: 5px  !important;
+  vertical-align: center !important;
+}
 
+td {
+ vertical-align: center !important;
+}
+
+.chart {
+  margin: 20px;
 }
 

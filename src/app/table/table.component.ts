@@ -9,7 +9,8 @@ import { stringify } from 'querystring';
 import {TooltipPosition} from '@angular/material/tooltip';
 import { UserData } from '../main/main.component';
 
-
+import { ChartDataSets, ChartOptions } from 'chart.js';
+import { Color, Label } from 'ng2-charts';
 
 @Component({
   selector: 'app-table',
@@ -35,6 +36,17 @@ export class TableComponent implements OnInit {
   selectedRows: RowDef[] = [];
  // complexView$ : boolean;
 
+ lineChartData: ChartDataSets[] = [ { data: [85, 72, 78, 75, 77, 75], label: 'Crude oil prices', borderColor:'red' },
+ { data: [0, 20, 35, 74, 22, 100], label: 'Crude oil 8',borderColor:'red' }, { data: [0, 20, 2, 85, 22, 100], label: 'Crude oil 8',borderColor:'green' }
+];
+ lineChartLabels: Label[] = ['10/01/2019', '12/01/2020', '01/01/1000', '01/02/2000', 'May', "444"];
+
+ lineChartOptions = {
+   responsive: true,
+ };
+
+
+
  
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -46,7 +58,7 @@ export class TableComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
     this.displayedColumns = this.columnDef.reduce((acc,key)=>acc.concat(key.name),[]);
-  //  this.complexView$ = this.complexView;
+  //  this.complexView$ = this.complexView;  
   }
 
   applyFilter(filterValue: string) {

@@ -1,0 +1,16 @@
+<form [formGroup]="form">
+    <mat-form-field>
+        <input matInput
+                placeholder="Choose a date"
+                [satDatepicker]="picker"
+                formControlName="date">
+        <sat-datepicker #picker [rangeMode]="true"
+                        panelClass="range-datepicker"
+                        [calendarHeaderComponent]="rangesFooter"
+                        [selectFirstDateOnClose]="true"
+                        [closeAfterSelection]="" >
+        </sat-datepicker>
+        <sat-datepicker-toggle matSuffix [for]="picker"></sat-datepicker-toggle>
+    </mat-form-field>
+    </form>
+    
